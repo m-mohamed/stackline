@@ -27,7 +27,14 @@ const App = () => {
                 <h2 className="text-2xl font-semibold p-6 border-b bg-gray-300">
                   Detailed Sales Data
                 </h2>
-                <SalesTable />
+                <div className="max-h-96 overflow-auto">
+                  <SalesTable />
+                </div>
+              </div>
+              {/* Placeholder for the new component below the table */}
+              <div className="bg-white rounded-lg shadow-lg p-6">
+                <h2 className="text-2xl font-semibold mb-4">Sales Chart</h2>
+                {/* Add your new component here */}
               </div>
             </div>
           </div>
