@@ -56,7 +56,7 @@ export const renderWithProviders = (
     <Provider store={store}>{children}</Provider>
   )
 
-  // Return an object with the store and all of RTL's query functions
+  // Return an object with the store and all of React Testing Library's query functions
   return {
     store,
     user: userEvent.setup(),
