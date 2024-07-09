@@ -15,26 +15,27 @@ const App = () => {
     <>
       <div className="min-h-screen bg-slate-100 flex flex-col">
         <Header />
-        <main className="flex-grow container mx-auto my-8 p-4">
+        <main className="flex-grow flex items-center justify-center container mx-auto my-8 p-4">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             <div className="lg:col-span-1">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl p-6">
+              <div
+                className="bg-white rounded-lg shadow-lg overflow-hidden transition-shadow hover:shadow-xl p-6 flex flex-col justify-between"
+                style={{ height: "800px" }}
+              >
                 <ProductDescription />
               </div>
             </div>
             <div className="lg:col-span-3 space-y-8">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden">
+              <div
+                className="bg-white rounded-lg shadow-lg overflow-hidden flex-grow flex flex-col"
+                style={{ height: "800px" }}
+              >
                 <h2 className="text-2xl font-semibold p-6 border-b bg-gray-300">
-                  Detailed Sales Data
+                  Retail Sales
                 </h2>
-                <div className="max-h-96 overflow-auto">
+                <div className="flex-grow overflow-auto">
                   <SalesTable />
                 </div>
-              </div>
-              {/* Placeholder for the new component below the table */}
-              <div className="bg-white rounded-lg shadow-lg p-6">
-                <h2 className="text-2xl font-semibold mb-4">Sales Chart</h2>
-                {/* Add your new component here */}
               </div>
             </div>
           </div>
